@@ -1,21 +1,41 @@
 .header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #333;
-  color: white;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px 24px;
 }
 
-.headerLink {
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   text-decoration: none;
   color: white;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 800;
+  transition: all 0.2s ease;
 }
 
-.headerLink:hover {
-  color: #ddd;
+.logo:hover {
+  transform: translateY(-1px);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.logoIcon {
+  font-size: 28px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .navigation {
@@ -23,7 +43,8 @@
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 1rem;
+  gap: 8px;
+  align-items: center;
 }
 
 .navigationItem {
@@ -33,10 +54,16 @@
 
 .navigationLink {
   text-decoration: none;
-  color: white;
-  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
 
 .navigationLink:hover {
-  color: #ddd;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transform: translateY(-1px);
 }
